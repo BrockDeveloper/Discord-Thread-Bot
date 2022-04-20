@@ -1,5 +1,5 @@
 # Discord-Thread-Bot
-Discord bot that generate threads in a text channel
+Discord bot that generates threads in a text channel
 
 ## How to
 ```
