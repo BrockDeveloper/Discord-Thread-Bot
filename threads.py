@@ -25,6 +25,7 @@ async def create_thread(self,name,minutes,message):
 
 # event on new discord message
 @Bot.event
+discord.TextChannel.create_thread = create_thread
 async def on_message(ctx):
     if "!ask" in ctx.content:
         name = ctx.content.replace("!ask ", "")
@@ -33,6 +34,5 @@ async def on_message(ctx):
         f = await ctx.channel.create_thread(name=name, minutes=1440, message=ctx)
 
 
-discord.TextChannel.create_thread = create_thread
 Bot = discord.Client()
 Bot.run(BOT_TOKEN)
